@@ -3,150 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home-page</title>
-    <style>
-
-.nav li{
-display: inline-block;
-    margin-left: 140px;
-    margin-left: 10px; 
- padding-left: 20px;
-    text-decoration: none;
-   font-size: larger;
-    } 
-    
-    nav li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* background-color: lightgray; */
-  padding-right: 28px;
+    <title>Lading page</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: century;
     }
-    .nav:hover{
- color: rgb(243, 237, 237);
-}
+    header{
+background-image: url('blue.jpg');
+
+height: 50vh;
+background-size: cover;
+background-position: center;
+min-height: 100px;
+    }
+    ul{
+        float: right;
+        list-style-type: none;
+        margin-top: 30px;
+        min-height: 400px;
+        margin-right: 40px;
+        font-size: 16px;
+    }
+    ul li{
+        display:inline-block ;
+        padding-top: 0%;
+
+    }
+    ul li a{
+        text-decoration: none;
+        color: #180707;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        transition: 0.5 ease;
+    }
+    ul li a:hover{
+        background-color: #fff;
+        color: #dd2525c7;
+    }
+    ul li.active a{
+        background-color: #dfb0b0;
+        color: #000;
+    
+    }
+    .logo img{
+        float: left;
+        width: 250px;
+        height: 200px;
+        margin-top: 20px;
+    }
     .main{
         max-width: 1200px;
         margin: auto;
+        background-image: url('blue2.jpg');
     }
     .title{
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%,-50%);
-       
     }
     .title h1{
-        color: #fff;
-        font-size: 60px;
+        color: #881c83;
+        font-size: 40px;
     }
-    .logo img{
-        float: left;
-        width: 250px;
-        margin-left: 2%;
-        padding-left: 15px;
-        height: auto;
-        margin-top: 50px;
-        background-color: aliceblue;
-    }
-    .main{
-        max-width: 1300px;
-        margin: auto;
-    }
-    h3{
-    color: rgb(234, 222, 238);
-    background-color: #6930c3;
-    margin-left: 0%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: xx-large;
-    padding-top: 0%;
-}
-#b1{
-    background-color: rgb(209, 146, 188);
-    color: whitesmoke;
-}
-#b1:hover{
-  color: red;
-  
-}
-
-h2{
-    color: rgb(235, 193, 236);
-    
-}
-.title{
+    .button{
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%,-50%);
     }
-    .title h1{
-        color: #e6bebe;
-        font-size: 70px;
+    .btn{
+        border: 1px solid #fff;
+        padding: 5px  20px;
+        color: #ffeded;
+        transition: 0.5 ease;
+        font-size: 18px;
+        text-decoration: none;
     }
-    h4{
-        color: rgb(236, 224, 224);
-        font-size: x-large;
-        padding-left: 50%;
+    .btn:hover{
+        background-color: #fff;
+        color: #000;
     }
-    #img4{
-        width: 680px;
-        padding-right: 18%;
-        margin-left: 16px;
+    .sub-menu{
+        display: none;
+        top: 6%;
+        position: relative;
     }
+    .sub-menu ul{
+position: absolute;
+    }
+    .main ul li:hover .sub-menu{
+        display: block;
+        position:absolute; 
+        background-color: rgb(191, 173, 207);
+        margin-top: 12px;
+        margin-left: -8px ;
+
+    }
+    .main ul li:hover .sub-menu ul{
+        display: block;
+        margin: 6px;
+
+    }
+    .main ul li :hover .sub-menu ul li{
+width: 75px;
+padding: 5px;
+border-bottom: 1px #fff;
+background: transparent;
+transition: 0.4 ease;
+text-align: left;
+border-radius: 0px;
+    }
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: hwb(180 99% 0%);
+    color: #a04991;
+    padding: 5px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 45, 117);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #000;
+}
 h1{
-    color: rgb(94, 65, 13);
-    text-align: center;
+    color: #070836;
+    
 }
 h5{
-    text-align: center;
-    background-color: rgb(226, 190, 226);
-    color: rgb(7, 46, 80);
+    color: hsla(312, 33%, 3%, 0.911);
+    background-color: #ffe5ec;
 }
-h5:hover{
- color: #cce3de;
+.j{
+    padding-top:5%;
+    margin-bottom: 3%; 
 }
-#img4:hover{
-color: red;
+#img22{
+   display: flex;
+   gap: 5px;
+   float: left;
+        margin-right: 10px;
+        width: 400px;
+        height: 400px;
+        margin-top: 0.0%;
+        margin-left: 28px;
+        
 }
- #p1{
-    background-color: #f3e8ea;
- }
-    </style>
-</head>
-<body>
-    <header>
-        <div id="p1">
-            <center><input type="text" placeholder="🔍search college, courses, Exams" size="50" box-width="50" ></center>
+#img23{
+   display: flex;
+   gap: 5px;
+   float: left;
+        margin-right: 10px;
+        width: 400px;
+        height: 400px;
+        margin-top: 0.0%;
+        margin-left: 28px;
+        
+}
+p{
+    text-align: 'right', 'justify';
+}
+#p1{
+    text-align: 'left', 'justify';
+}
+#u {
+    color: red;
+    text-align: center; /* Centers text horizontally */
+    font-size: 19px;
+    font-weight: bold;
+    display: block; /* Ensure it takes the full width */
+ justify-content: center; /* Centers horizontally */
+    align-items: center;
+    margin: 0% auto; /* Adds spacing */
+}
+#img24{
+    margin-left: 30%;
+    width: 500px;
+    height: 400px;
+}
+/* General Styling */
+.container-fluid {
+    padding: 60px 20px;
+}
 
-        </div> 
-        <div class="main">
-            <dir class="logo">
-                <center><h3><b>Business Consultancy & IT Solutions PVT .LTD</b></center></b></h3> 
-                <img src="proffesional.jpg" alt="" height="300" width="350">
-            </dir>
-            <ul>
-                <div class="nav">
-                    <nav class="nav">
-                        <b id="b1"><li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Contact us</a></li></b>
-                        </nav>
-                    </div>
-                    <div class="title">
-                        <!-- <h4>BUSINESS SOLUTIONS!</h4> -->
-                    </div><br><br>
-<center><img src="we-are-hiring.jpg" alt="" id="img4" height="" width="680"></center>
-<h5>Business Planning  | Marketing Strategy  | Business Training  | Business Management</h5>
-<b><h1>We Make Finance</h1></b>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quam eius et veniam repellendus temporibus corporis ipsum natus quidem repudiandae numquam non, nam recusandae architecto illum quibusdam. Fugiat, totam quam.</p></b>
+/* Team Item Styling */
+.team-item {
+    border-radius: 10px;
+    overflow: hidden;
+  position:static;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-            </ul>
-        </div>
-    </header>
+.team-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+/* Team Member Name */
+.team-text h3 {
+    font-size: 8px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 145px;
+
+}
+.team-member {
+    text-align: center; /* Centers text under each image */
+}
+/* Team Member Designation */
+
+
+
+.team-container {
+    display: flex;  /* Enables flexbox */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Aligns items vertically */
+    flex-wrap: nowrap; /* Ensures items stay in one row */
+    gap: 10px; /* Adds spacing between images */
+}
+.d1 {
+    background-color: rgb(228, 192, 225);
+    color: #ddd;
+    display: flex; /* Enables flexbox */
+    justify-content: space-around; /* Distributes items evenly */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 20px; /* Space between sections */
+    padding: 20px;
+}
+
+.quick-links, .contact-info {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+ .d,#ho:hover {
+    background-color: blue;
+    color: #b61414;
     
-</body>
-</html>
+}
+footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+            background: #007BFF;
+            color: rgb(14, 12, 12);
+            font-size: 10px;
+        }
+
+
+</style>
+<body>
+<header>
+    <div class="main">
+        <dir class="logo">
+            <h1>CONSULT</h1>
+            <img src="job.jpg" alt="img" width="300" height="200">
+        </dir>
+        <ul>
+            <li class="dropdown">
+                <button class="dropbtn" style="color: #000;"><i class="fa fa-caret-down"></i><a href="index1.html">Home</a></button>
+                <div class="dropdown-content">
+                        
+                    </div>
+
+            <li><div class="dropdown">
+                <button class="dropbtn" style="color: #000;"><i class="fa fa-caret-down"></i><a href="aboutus.html">About us</a></button>
+                <div class="dropdown-content">
+                    
+                                        
+                    </div>
+                    <li class="dropdown">
+                        <button class="dropbtn" style="color: #000;"><i class="fa fa-caret-down"><a href="ourservices.html"></i>Services</a></button>
+                        <div class="dropdown-content">
+                            
+                            </div>
+                            <li class="dropdown">
+                                <button class="dropbtn" style="color: #000;"><i class="fa fa-caret-down"></i><a href="contactus.html">Contact us</a></button>
+                                <div class="dropdown-content">
+                                    
+                                        
+                                    </div>
+                                    
+                                            <li class="dropdown">
+                                                <button class="dropbtn" style="color: #000;"><i class="fa fa-caret-down"><a href="testimonial.html"></i>Testimonials</a></button>
+                                                <div class="dropdown-content">
+                                                   
+                                                    </div></div>
+
+                                                </ul>
+                                               </div>
+                                                </li>
+                                                </div><br>
+                                                <!-- <div class="button">
+                                                    <a href="#" class="btn">Privacy</a>
+                                                     <a href="#" class="btn">Policy</a>
+                                                     <a href="#" class="btn">Career</a>     
+                                           </div> <br>   -->
+
+                                    <div class="title">
+                                        <center><h5>Business Consultancy</h5></center><br>
+                              <h1 style="background-color: hwb(0 96% 0%); color: #000;">Take Our Help To Reach<br><center>The Top Level</center></h1>
+                                      </div>
+                                    
+                    </header><br> 
+                    <div class="j">
+                 <img src="confference3.jpg" alt="" width="500" height="400" id="img22" style="margin-top: 0cap;">   <img src="meeting.jpg" alt="" width="600" height="400" id="img22"> <img src="confference2.jpg" alt="" width="600" height="400" id="img22">   
+                
+                                    </div>
+                                    <center><h3 id="u"> <a href="">Business Planning</a>  |  <a href="#">Financial Analaysis</a> | <a href="#">Legal Advisory</a></h3></center><br><br>
+                                    <!-- <img src="confference3.jpg" alt="" width="500" height="400" id="img23" style="margin-top: 5cap;">   <img src="meeting.jpg" alt="" width="600" height="400" id="img23"> <img src="confference2.jpg" alt="" width="600" height="400" id="img23">      -->
+                                    <img src="black.jpg" alt="" width="600" height="600" id="img22" style="margin-top: 5px;">  <img src="backgrund.jpg" alt="" width="600" height="600" id="img22" style="margin-top: 5px;"> <br>
+                                    <p><h1> Request A Free Quotes</h1>Placement refers to the process through which students are provided with job opportunities, internships, or other career-related placements, typically through their educational institution. It's a critical part of a student's academic journey as it helps transition from education to the professional world.
+                                        Placement drives are events organized by educational institutions where companies visit the campus to recruit students for job roles. Companies conduct interviews, written tests, group discussions, and other rounds during these drives.Placement drives are events organized by educational institutions where companies visit the campus to recruit students for job roles. Companies conduct interviews, 
+                                        written tests, group discussions, and other rounds during these drives. <br> <br>
+                                        <fieldset id="f" style="padding-left: 30px; box-sizing: 30px; margin-right: 50px; margin-top: 0%; background: rgb(230, 230, 208);"><input type="text" placeholder="Full Name">  <input type="text" placeholder="Email address" size="28px"><br>
+                                   <br>
+                                                                  
+                                     <select id="options" name="options">
+                                        <option value="option">Select services</option>
+                                         <option value="option1">Financial Consultancy</option>
+                                         <option value="option2">Statergic Consultancy</option>
+                                         <option value="option3">Tax Consultancy</option>
+                                     </select> <button id="btn" style="color: rgb(241, 230, 230); background-color: #690808;" >Request A Quotes</button></fieldset>
+                                   </p> <br> 
+                                    
+                                   <!-- <center><h1>Our Team Members</h1><br></center> -->
+                         
+                         
+                                   <!-- <img src="myself.jpg" alt="" width="300" height="350" id="img22" style="margin-top: 0cap;">   <img src="meeting.jpg" alt="" width="600" height="400" id="img22"> <img src="confference2.jpg" alt="" width="600" height="400" id="img22">    -->
+                 <!-- Team Section -->
+                 <div class="container-fluid py-6 px-5">
+                    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                    </div> <center><h1 style="background-color: rgb(236, 222, 222);"> Our Team Members</h1></center><br>
+                
+                    <div class="row justify-content-center">
+                        <!-- Team Member 1 -->
+                        <div class="team-container">
+                            <div class="team-member" style="padding-right:2px;">
+                                <img src="mypassport.jpg" alt="Member 1" width="250" height="300">
+                                <h4>Komal Panditkar</h4>
+                                <p>Fullstack Developer</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="krutikabelonde.jpg" alt="Member 2" width="200" height="280">
+                                <h4>Krutika Belonde</h4>
+                                <p>Frontend Developer</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="snehal.jpg" alt="Member 3" width="300">
+                                <h3>Snehal Swami</h3>
+                                <p>Fullstack Developer</p>
+                            </div>
+                        </div> <br><br>
+
+                         <div class ="d" style="background-color: rgb(236, 222, 222);">
+                            <center><h1>Stay Update</h1></center><br><br>
+                            <center><input type="text" name="" id="" placeholder="Your Email" size="50%"><button id="btn" style="color:rgb(255, 245, 245); background-color: #f17e7e;"><a href="signup.html">sign up</a></button></center> <br><br>
+                             </div>
+                
+                        <div class="d1" style="background-color: rgb(19, 17, 19); color: #ddd; gap:20px;" >
+                        <h4>Quick Links  <br><br> <a href="index1.html"> Home</a>  | <a href="aboutus.html">About us</a>   |  <a href="ourservices.html">Our services</a> | <a href="contactus.html">Contact us</a> </h4>
+                         
+                        
+                         <p><h4>Get In Touch <br> 📍 infinity tech pvt.ltd, Chh.Sambhajinagar-431136 <br>📧infinitytech@gmail.com <br>📞8805894520</h4></p>
+                         
+                <br>   
+                         <p><h4> Follow Us <br><br>  <a href="https://www.instagram.com/prajkta_panditkar/"><img src="insta2.jpg" alt="" height="30px" width="30px" id="ho"></a> <a href="https://www.linkedin.com/in/komal-panditkar-5923822b5/"><img src="linked.jpg" alt="" height="30px" width="30px" id="ho"></a> <a href="https://www.facebook.com/"><img src="facebook.jpg" alt="" height="30px" width="30px" id="ho">  </a><a href="https://x.com/?lang=en"><img src="twitter.jpg" alt="" height="30px" width="30px" id="ho"></a></h4></p>
+                        </div>   
+
+                        <footer>
+                            <p>© 2025 Infinity Tech Resources | Contact: info@infinitytech.com | Phone: +123 456 7890</p>
+                        </footer>
+                                </body>
+                               </html>
