@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+</head>
+<body>
+
+    <div class="testimonial-section" onclick="handleClick(event)">
+        <h2>What Our Clients Say</h2>
+        
+        <div class="testimonial active">
+            <p>"The placement consultancy helped me land my dream job! The guidance and support were exceptional."</p>
+            <div class="author">- Rahul Sharma</div>
+        </div>
+
+        <div class="testimonial">
+            <p>"Great experience! Their resume-building service boosted my confidence and job opportunities."</p>
+            <div class="author">- Priya Mehta</div>
+        </div>
+
+        <div class="testimonial">
+            <p>"Highly recommend! They connected me with top recruiters and made the hiring process smooth."</p>
+            <div class="author">- Arjun Verma</div>
+        </div>
+
+        <div class="navigation">
+            <div class="nav-btn active" onclick="showTestimonial(0, event)"></div>
+            <div class="nav-btn" onclick="showTestimonial(1, event)"></div>
+            <div class="nav-btn" onclick="showTestimonial(2, event)"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .testimonial-section {
+            width: 80%;
+            max-width: 700px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .testimonial.active {
+            display: block;
+            opacity: 1;
+        }
+        .testimonial p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .author {
+            font-weight: bold;
+            font-size: 16px;
+            color: #555;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .nav-btn {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .nav-btn.active {
+            background: #333;
+        }
+    </style>
+
+
+
+
+    <script>
+        let testimonials = document.querySelectorAll('.testimonial');
+        let navButtons = document.querySelectorAll('.nav-btn');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.remove('active');
+                testimonial.style.display = 'none';
+                navButtons[i].classList.remove('active');
+            });
+
+            testimonials[index].style.display = 'block';
+            setTimeout(() => testimonials[index].classList.add('active'), 10);
+            navButtons[index].classList.add('active');
+            currentIndex = index;
+        }
+
+        function handleClick(event) {
+            const section = document.querySelector('.testimonial-section');
+            const rect = section.getBoundingClientRect();
+            const clickX = event.clientX;
+            const midPoint = rect.left + rect.width / 2;
+            
+            if (clickX < midPoint) {
+                currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            } else {
+                currentIndex = (currentIndex + 1) % testimonials.length;
+            }
+            showTestimonial(currentIndex);
+        }
+
+        // Auto-Slide every 4 seconds
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(nextIndex);
+        }, 4000);
+    </script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        h1{
+            background-color: skyblue;
+        }
+        #img{
+            padding-bottom: 0%;
+        }
+        footer {
+            text-align: center;
+            padding: 5px;
+            margin-top: 10px;
+            background: #000000;
+            color: white;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="services">
+            <div class="service-box">
+                <div class="service-title" style="background-color: lightgoldenrodyellow;">Resume Writing</div>
+                <div class="service-subtitle">Crafting Professional Resumes</div>
+                <p class="service-description">
+                    Our professional resume writing service is designed to highlight your strengths and achievements effectively, 
+                    giving you a competitive edge in the job market.
+                </p>
+            </div>
+            <div class="service-box">
+                <div class="service-title" style="background-color: lightgray;">Job Placement</div>
+                <div class="service-subtitle">Industry-specific Placements</div>
+                <p class="service-description">
+                    We specialize in job placements across various industries, ensuring that both job seekers and companies 
+                    find the perfect fit for their requirements.
+                </p>
+            </div>
+            <div class="service-box">
+                <div class="service-title" style="background-color: lightgreen;">Career Resources</div>
+                <div class="service-subtitle">Guides & Templates</div>
+                <p class="service-description">
+                    Access our informative blogs, guides, and templates designed to empower job seekers with 
+                    the knowledge and tools needed to succeed in their job search. 
+                    <!-- <img src="oursevice.jpg" alt="" height="400" width="450" id="img" style="padding-left: 130%; margin-bottom: 300%;" > -->
+                </p>
+                <footer>
+                    <p>© 2025 Infinity Tech Resources | Contact: info@infinitytech.com | Phone: +123 456 7890</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<style>
+    body {
+        font-family: 'Times New Roman', serif;
+        background :url(image.png);
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin-top: 30px;
+    }
+    .service-box {
+        position: relative;
+        padding-top: 20px;
+    }
+    .service-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        border-top: 2px solid black;
+    }
+    .service-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    .service-subtitle {
+        font-style: italic;
+        font-size: 16px;
+        color: #555;
+    }
+    .service-description {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+    }
+    @media (max-width: 768px) {
+        .services {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
